@@ -1,6 +1,9 @@
 import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/swiper-bundle.css"
 
+import CategoryCard from "../components/CategoryCard"
+import RecipeCard from "../components/RecipeCard"
+
 export default function Browse() {
     return (
         <>
@@ -54,20 +57,21 @@ export default function Browse() {
                         slidesOffsetAfter={20}
                     >
                         <SwiperSlide className="!w-fit pb-[30px]">
-                            <a href="category.html" className="card">
-                                <div className="flex flex-col w-fit min-w-[90px] rounded-[31px] p-[10px] pb-5 gap-[10px] text-center bg-white shadow-[0_12px_30px_0_#D6D6D680] transition-all duration-300 hover:shadow-[0_10px_20px_0_#2d952480] hover:bg-[#2d9524] hover:text-white">
-                                    <div className="flex shrink-0 w-[70px] h-[70px] rounded-full bg-white">
-                                        <img
-                                            src="/assets/images/icons/bakery.png"
-                                            className="object-cover w-full h-full object-top"
-                                            alt="icon"
-                                        />
-                                    </div>
-                                    <h3 className="font-semibold text-sm leading-[21px]">Bakery</h3>
-                                </div>
-                            </a>
+                            <CategoryCard />
                         </SwiperSlide>
                         <SwiperSlide className="!w-fit pb-[30px]">
+                            <CategoryCard />
+                        </SwiperSlide>
+                        <SwiperSlide className="!w-fit pb-[30px]">
+                            <CategoryCard />
+                        </SwiperSlide>
+                        <SwiperSlide className="!w-fit pb-[30px]">
+                            <CategoryCard />
+                        </SwiperSlide>
+                        <SwiperSlide className="!w-fit pb-[30px]">
+                            <CategoryCard />
+                        </SwiperSlide>
+                        {/* <SwiperSlide className="!w-fit pb-[30px]">
                             <a href="category.html" className="card">
                                 <div className="flex flex-col w-fit min-w-[90px] rounded-[31px] p-[10px] pb-5 gap-[10px] text-center transition-all duration-300 shadow-[0_10px_20px_0_#2d952480] bg-[#2d9524] text-white">
                                     <div className="flex shrink-0 w-[70px] h-[70px] rounded-full bg-white">
@@ -136,7 +140,7 @@ export default function Browse() {
                                     <h3 className="font-semibold text-sm leading-[21px]">Baverages</h3>
                                 </div>
                             </a>
-                        </SwiperSlide>
+                        </SwiperSlide> */}
                     </Swiper>
                 </div>
             </section>
@@ -160,38 +164,15 @@ export default function Browse() {
                         slidesOffsetAfter={20}
                     >
                         <SwiperSlide className="!w-fit">
-                            <a href="details.html" className="card">
-                                <div className="relative w-[200px] h-[280px] rounded-[30px] bg-white overflow-hidden">
-                                    <img
-                                        src="/assets/images/thumbnails/thumbnail-1.png"
-                                        className="absolute w-full h-full object-cover"
-                                        alt="thumbnails"
-                                    />
-                                    <div className="gradient-filter absolute w-full h-full bg-[linear-gradient(180deg,rgba(0,0,0,0)40.47%,#000000_81.6%)] z-10" />
-                                    <div className="relative flex flex-col h-full justify-between p-5 z-20">
-                                        <div className="flex shrink-0 items-center w-fit rounded-full py-1 px-2 bg-white/20 backdrop-blur">
-                                            <img
-                                                src="/assets/images/icons/Star 1.svg"
-                                                className="w-4 h-4"
-                                                alt="star"
-                                            />
-                                            <span className="font-semibold text-xs leading-[18px] text-white">
-                                                4.5
-                                            </span>
-                                        </div>
-                                        <div className="flex flex-col gap-[6px]">
-                                            <h3 className="font-bold text-xl leading-[28px] text-white">
-                                                Orange Cake Masterpieces
-                                            </h3>
-                                            <p className="font-semibold text-xs leading-[18px] text-[#2d9524]">
-                                                Sweet
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
+                            <RecipeCard />
                         </SwiperSlide>
                         <SwiperSlide className="!w-fit">
+                            <RecipeCard />
+                        </SwiperSlide>
+                        <SwiperSlide className="!w-fit">
+                            <RecipeCard />
+                        </SwiperSlide>
+                        {/* <SwiperSlide className="!w-fit">
                             <a href="details.html" className="card">
                                 <div className="relative w-[200px] h-[280px] rounded-[30px] bg-white overflow-hidden">
                                     <img
@@ -254,7 +235,7 @@ export default function Browse() {
                                     </div>
                                 </div>
                             </a>
-                        </SwiperSlide>
+                        </SwiperSlide> */}
                     </Swiper>
                 </div>
             </section>

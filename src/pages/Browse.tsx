@@ -9,7 +9,7 @@ export default function Browse() {
                     <img src="/assets/images/logos/logo.svg" alt="logo" />
                 </a>
                 <a href="#">
-                    <div className="flex items-center justify-center w-10 h-10 rounded-full bg-white shadow-[0_10px_20px_0_#D6D6D6AB] transition-all duration-300 hover:shadow-[0_10px_20px_0_#FF4C1C80]">
+                    <div className="flex items-center justify-center w-10 h-10 rounded-full bg-white shadow-[0_10px_20px_0_#2d9524] transition-all duration-300 hover:shadow-[0_10px_20px_0_#2d952480]">
                         <img
                             src="/assets/images/icons/notification.svg"
                             className="w-5 h-5 object-contain"
@@ -21,7 +21,7 @@ export default function Browse() {
             <div id="SearchForm" className="px-5 mt-[30px]">
                 <form
                     action="search.html"
-                    className="flex items-center rounded-full p-[5px_14px] pr-[5px] gap-[10px] bg-white shadow-[0_12px_30px_0_#D6D6D652] transition-all duration-300 focus-within:ring-1 focus-within:ring-[#FF4C1C]"
+                    className="flex items-center rounded-full p-[5px_14px] pr-[5px] gap-[10px] bg-white shadow-[0_12px_30px_0_#D6D6D652] transition-all duration-300 focus-within:ring-1 focus-within:ring-[#2d9524]"
                 >
                     <img
                         src="/assets/images/icons/note-favorite.svg"
@@ -55,7 +55,7 @@ export default function Browse() {
                     >
                         <SwiperSlide className="!w-fit pb-[30px]">
                             <a href="category.html" className="card">
-                                <div className="flex flex-col w-fit min-w-[90px] rounded-[31px] p-[10px] pb-5 gap-[10px] text-center bg-white shadow-[0_12px_30px_0_#D6D6D680] transition-all duration-300 hover:shadow-[0_10px_20px_0_#FF4C1C80] hover:bg-[#FF4C1C] hover:text-white">
+                                <div className="flex flex-col w-fit min-w-[90px] rounded-[31px] p-[10px] pb-5 gap-[10px] text-center bg-white shadow-[0_12px_30px_0_#D6D6D680] transition-all duration-300 hover:shadow-[0_10px_20px_0_#2d952480] hover:bg-[#2d9524] hover:text-white">
                                     <div className="flex shrink-0 w-[70px] h-[70px] rounded-full bg-white">
                                         <img
                                             src="/assets/images/icons/bakery.png"
@@ -69,7 +69,7 @@ export default function Browse() {
                         </SwiperSlide>
                         <SwiperSlide className="!w-fit pb-[30px]">
                             <a href="category.html" className="card">
-                                <div className="flex flex-col w-fit min-w-[90px] rounded-[31px] p-[10px] pb-5 gap-[10px] text-center transition-all duration-300 shadow-[0_10px_20px_0_#FF4C1C80] bg-[#FF4C1C] text-white">
+                                <div className="flex flex-col w-fit min-w-[90px] rounded-[31px] p-[10px] pb-5 gap-[10px] text-center transition-all duration-300 shadow-[0_10px_20px_0_#2d952480] bg-[#2d9524] text-white">
                                     <div className="flex shrink-0 w-[70px] h-[70px] rounded-full bg-white">
                                         <img
                                             src="/assets/images/icons/soup.png"
@@ -83,7 +83,7 @@ export default function Browse() {
                         </SwiperSlide>
                         <SwiperSlide className="!w-fit pb-[30px]">
                             <a href="category.html" className="card">
-                                <div className="flex flex-col w-fit min-w-[90px] rounded-[31px] p-[10px] pb-5 gap-[10px] text-center bg-white shadow-[0_12px_30px_0_#D6D6D680] transition-all duration-300 hover:shadow-[0_10px_20px_0_#FF4C1C80] hover:bg-[#FF4C1C] hover:text-white">
+                                <div className="flex flex-col w-fit min-w-[90px] rounded-[31px] p-[10px] pb-5 gap-[10px] text-center bg-white shadow-[0_12px_30px_0_#D6D6D680] transition-all duration-300 hover:shadow-[0_10px_20px_0_#2d952480] hover:bg-[#2d9524] hover:text-white">
                                     <div className="flex shrink-0 w-[70px] h-[70px] rounded-full bg-white">
                                         <img
                                             src="/assets/images/icons/noodles.png"
@@ -97,7 +97,7 @@ export default function Browse() {
                         </SwiperSlide>
                         <SwiperSlide className="!w-fit pb-[30px]">
                             <a href="category.html" className="card">
-                                <div className="flex flex-col w-fit min-w-[90px] rounded-[31px] p-[10px] pb-5 gap-[10px] text-center bg-white shadow-[0_12px_30px_0_#D6D6D680] transition-all duration-300 hover:shadow-[0_10px_20px_0_#FF4C1C80] hover:bg-[#FF4C1C] hover:text-white">
+                                <div className="flex flex-col w-fit min-w-[90px] rounded-[31px] p-[10px] pb-5 gap-[10px] text-center bg-white shadow-[0_12px_30px_0_#D6D6D680] transition-all duration-300 hover:shadow-[0_10px_20px_0_#2d952480] hover:bg-[#2d9524] hover:text-white">
                                     <div className="flex shrink-0 w-[70px] h-[70px] rounded-full bg-white">
                                         <img
                                             src="/assets/images/icons/salad.png"
@@ -111,7 +111,7 @@ export default function Browse() {
                         </SwiperSlide>
                         <SwiperSlide className="!w-fit pb-[30px]">
                             <a href="category.html" className="card">
-                                <div className="flex flex-col w-fit min-w-[90px] rounded-[31px] p-[10px] pb-5 gap-[10px] text-center bg-white shadow-[0_12px_30px_0_#D6D6D680] transition-all duration-300 hover:shadow-[0_10px_20px_0_#FF4C1C80] hover:bg-[#FF4C1C] hover:text-white">
+                                <div className="flex flex-col w-fit min-w-[90px] rounded-[31px] p-[10px] pb-5 gap-[10px] text-center bg-white shadow-[0_12px_30px_0_#D6D6D680] transition-all duration-300 hover:shadow-[0_10px_20px_0_#2d952480] hover:bg-[#2d9524] hover:text-white">
                                     <div className="flex shrink-0 w-[70px] h-[70px] rounded-full bg-white">
                                         <img
                                             src="/assets/images/icons/grill.png"
@@ -125,7 +125,7 @@ export default function Browse() {
                         </SwiperSlide>
                         <SwiperSlide className="!w-fit pb-[30px]">
                             <a href="category.html" className="card">
-                                <div className="flex flex-col w-fit min-w-[90px] rounded-[31px] p-[10px] pb-5 gap-[10px] text-center bg-white shadow-[0_12px_30px_0_#D6D6D680] transition-all duration-300 hover:shadow-[0_10px_20px_0_#FF4C1C80] hover:bg-[#FF4C1C] hover:text-white">
+                                <div className="flex flex-col w-fit min-w-[90px] rounded-[31px] p-[10px] pb-5 gap-[10px] text-center bg-white shadow-[0_12px_30px_0_#D6D6D680] transition-all duration-300 hover:shadow-[0_10px_20px_0_#2d952480] hover:bg-[#2d9524] hover:text-white">
                                     <div className="flex shrink-0 w-[70px] h-[70px] rounded-full bg-white">
                                         <img
                                             src="/assets/images/icons/baverages.png"
@@ -145,7 +145,7 @@ export default function Browse() {
                     <h2 className="font-bold">Made by People</h2>
                     <a
                         href="#"
-                        className="font-semibold text-sm leading-[21px] text-[#FF4C1C]"
+                        className="font-semibold text-sm leading-[21px] text-[#2d9524]"
                     >
                         Explore All
                     </a>
@@ -183,7 +183,7 @@ export default function Browse() {
                                             <h3 className="font-bold text-xl leading-[28px] text-white">
                                                 Orange Cake Masterpieces
                                             </h3>
-                                            <p className="font-semibold text-xs leading-[18px] text-[#FF4C1C]">
+                                            <p className="font-semibold text-xs leading-[18px] text-[#2d9524]">
                                                 Sweet
                                             </p>
                                         </div>
@@ -215,7 +215,7 @@ export default function Browse() {
                                             <h3 className="font-bold text-xl leading-[28px] text-white">
                                                 Burger Tebal Makin Hot
                                             </h3>
-                                            <p className="font-semibold text-xs leading-[18px] text-[#FF4C1C]">
+                                            <p className="font-semibold text-xs leading-[18px] text-[#2d9524]">
                                                 Bakery
                                             </p>
                                         </div>
@@ -247,7 +247,7 @@ export default function Browse() {
                                             <h3 className="font-bold text-xl leading-[28px] text-white">
                                                 French Toast Blueberries
                                             </h3>
-                                            <p className="font-semibold text-xs leading-[18px] text-[#FF4C1C]">
+                                            <p className="font-semibold text-xs leading-[18px] text-[#2d9524]">
                                                 by Masa
                                             </p>
                                         </div>
@@ -266,7 +266,7 @@ export default function Browse() {
                     <a href="#" className="nav-items">
                         <div className="flex flex-col items-center text-center gap-[7px] text-sm leading-[21px] font-semibold">
                             <img
-                                src="/assets/images/icons/note-favorite-orange.svg"
+                                src="/assets/images/icons/note-favorite-green.svg"
                                 className="w-6 h-6"
                                 alt="icon"
                             />

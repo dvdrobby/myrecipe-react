@@ -1,17 +1,29 @@
-import { Swiper, SwiperSlide } from "swiper/react"
-import "swiper/swiper-bundle.css"
-
-import CategoryCard from "../components/CategoryCard"
-import RecipeCard from "../components/RecipeCard"
+import { useNavigate } from "react-router-dom"
+import { useState } from "react";
+import CategoryWrapper from "../wrapper/CategoryWrapper";
+import FeaturedRecipesWrapper from "../wrapper/FeaturedRecipesWrapper"
 
 export default function Browse() {
+    const [searchQuery, setSearchQuery] = useState<string>('');
+    const navigate = useNavigate();
+
+    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setSearchQuery(event.target.value);
+    }
+
+    const handleSearch = () => {
+        if (searchQuery.length > 0) {
+            navigate(`/search?keyword=${searchQuery}`);
+        }
+    }
+
     return (
         <>
             <nav className="flex items-center justify-between px-5 mt-[30px]">
-                <a href="index.html" className="flex shrink-0">
+                <a className="flex shrink-0">
                     <img src="/assets/images/logos/logo.svg" alt="logo" />
                 </a>
-                <a href="#">
+                <a >
                     <div className="flex items-center justify-center w-10 h-10 rounded-full bg-white shadow-[0_10px_20px_0_#2d9524] transition-all duration-300 hover:shadow-[0_10px_20px_0_#2d952480]">
                         <img
                             src="/assets/images/icons/notification.svg"
@@ -22,8 +34,7 @@ export default function Browse() {
                 </a>
             </nav>
             <div id="SearchForm" className="px-5 mt-[30px]">
-                <form
-                    action="search.html"
+                <div
                     className="flex items-center rounded-full p-[5px_14px] pr-[5px] gap-[10px] bg-white shadow-[0_12px_30px_0_#D6D6D652] transition-all duration-300 focus-within:ring-1 focus-within:ring-[#2d9524]"
                 >
                     <img
@@ -35,210 +46,18 @@ export default function Browse() {
                         type="text"
                         name="search"
                         id="search"
+                        onChange={handleInputChange}
+                        value={searchQuery}
                         className="appearance-none outline-none w-full font-semibold placeholder:font-normal placeholder:text-black"
                         placeholder="Find our best food recipes"
                     />
-                    <button type="submit" className=" flex shrink-0 w-[42px] h-[42px]">
+                    <button onClick={handleSearch} className=" flex shrink-0 w-[42px] h-[42px]">
                         <img src="/assets/images/icons/search.svg" alt="icon" />
                     </button>
-                </form>
+                </div>
             </div>
-            <section id="Categories" className="mt-[30px]">
-                <div className="flex items-center justify-between px-5">
-                    <h2 className="font-bold">By Categories</h2>
-                </div>
-                <div className="swiper w-full mt-3">
-                    <Swiper
-                        className="w-full mt-3"
-                        direction="horizontal"
-                        spaceBetween={16}
-                        slidesPerView="auto"
-                        slidesOffsetBefore={20}
-                        slidesOffsetAfter={20}
-                    >
-                        <SwiperSlide className="!w-fit pb-[30px]">
-                            <CategoryCard />
-                        </SwiperSlide>
-                        <SwiperSlide className="!w-fit pb-[30px]">
-                            <CategoryCard />
-                        </SwiperSlide>
-                        <SwiperSlide className="!w-fit pb-[30px]">
-                            <CategoryCard />
-                        </SwiperSlide>
-                        <SwiperSlide className="!w-fit pb-[30px]">
-                            <CategoryCard />
-                        </SwiperSlide>
-                        <SwiperSlide className="!w-fit pb-[30px]">
-                            <CategoryCard />
-                        </SwiperSlide>
-                        {/* <SwiperSlide className="!w-fit pb-[30px]">
-                            <a href="category.html" className="card">
-                                <div className="flex flex-col w-fit min-w-[90px] rounded-[31px] p-[10px] pb-5 gap-[10px] text-center transition-all duration-300 shadow-[0_10px_20px_0_#2d952480] bg-[#2d9524] text-white">
-                                    <div className="flex shrink-0 w-[70px] h-[70px] rounded-full bg-white">
-                                        <img
-                                            src="/assets/images/icons/soup.png"
-                                            className="object-contain w-full h-full"
-                                            alt="icon"
-                                        />
-                                    </div>
-                                    <h3 className="font-semibold text-sm leading-[21px]">Soup</h3>
-                                </div>
-                            </a>
-                        </SwiperSlide>
-                        <SwiperSlide className="!w-fit pb-[30px]">
-                            <a href="category.html" className="card">
-                                <div className="flex flex-col w-fit min-w-[90px] rounded-[31px] p-[10px] pb-5 gap-[10px] text-center bg-white shadow-[0_12px_30px_0_#D6D6D680] transition-all duration-300 hover:shadow-[0_10px_20px_0_#2d952480] hover:bg-[#2d9524] hover:text-white">
-                                    <div className="flex shrink-0 w-[70px] h-[70px] rounded-full bg-white">
-                                        <img
-                                            src="/assets/images/icons/noodles.png"
-                                            className="object-contain w-full h-full"
-                                            alt="icon"
-                                        />
-                                    </div>
-                                    <h3 className="font-semibold text-sm leading-[21px]">Noodles</h3>
-                                </div>
-                            </a>
-                        </SwiperSlide>
-                        <SwiperSlide className="!w-fit pb-[30px]">
-                            <a href="category.html" className="card">
-                                <div className="flex flex-col w-fit min-w-[90px] rounded-[31px] p-[10px] pb-5 gap-[10px] text-center bg-white shadow-[0_12px_30px_0_#D6D6D680] transition-all duration-300 hover:shadow-[0_10px_20px_0_#2d952480] hover:bg-[#2d9524] hover:text-white">
-                                    <div className="flex shrink-0 w-[70px] h-[70px] rounded-full bg-white">
-                                        <img
-                                            src="/assets/images/icons/salad.png"
-                                            className="object-contain w-full h-full"
-                                            alt="icon"
-                                        />
-                                    </div>
-                                    <h3 className="font-semibold text-sm leading-[21px]">Salad</h3>
-                                </div>
-                            </a>
-                        </SwiperSlide>
-                        <SwiperSlide className="!w-fit pb-[30px]">
-                            <a href="category.html" className="card">
-                                <div className="flex flex-col w-fit min-w-[90px] rounded-[31px] p-[10px] pb-5 gap-[10px] text-center bg-white shadow-[0_12px_30px_0_#D6D6D680] transition-all duration-300 hover:shadow-[0_10px_20px_0_#2d952480] hover:bg-[#2d9524] hover:text-white">
-                                    <div className="flex shrink-0 w-[70px] h-[70px] rounded-full bg-white">
-                                        <img
-                                            src="/assets/images/icons/grill.png"
-                                            className="object-contain w-full h-full"
-                                            alt="icon"
-                                        />
-                                    </div>
-                                    <h3 className="font-semibold text-sm leading-[21px]">Grills</h3>
-                                </div>
-                            </a>
-                        </SwiperSlide>
-                        <SwiperSlide className="!w-fit pb-[30px]">
-                            <a href="category.html" className="card">
-                                <div className="flex flex-col w-fit min-w-[90px] rounded-[31px] p-[10px] pb-5 gap-[10px] text-center bg-white shadow-[0_12px_30px_0_#D6D6D680] transition-all duration-300 hover:shadow-[0_10px_20px_0_#2d952480] hover:bg-[#2d9524] hover:text-white">
-                                    <div className="flex shrink-0 w-[70px] h-[70px] rounded-full bg-white">
-                                        <img
-                                            src="/assets/images/icons/baverages.png"
-                                            className="object-contain w-full h-full"
-                                            alt="icon"
-                                        />
-                                    </div>
-                                    <h3 className="font-semibold text-sm leading-[21px]">Baverages</h3>
-                                </div>
-                            </a>
-                        </SwiperSlide> */}
-                    </Swiper>
-                </div>
-            </section>
-            <section id="MadeByPeople">
-                <div className="flex items-center justify-between px-5">
-                    <h2 className="font-bold">Made by People</h2>
-                    <a
-                        href="#"
-                        className="font-semibold text-sm leading-[21px] text-[#2d9524]"
-                    >
-                        Explore All
-                    </a>
-                </div>
-                <div className="swiper w-full mt-3">
-                    <Swiper
-                        className="w-full mt-3"
-                        direction="horizontal"
-                        spaceBetween={16}
-                        slidesPerView="auto"
-                        slidesOffsetBefore={20}
-                        slidesOffsetAfter={20}
-                    >
-                        <SwiperSlide className="!w-fit">
-                            <RecipeCard />
-                        </SwiperSlide>
-                        <SwiperSlide className="!w-fit">
-                            <RecipeCard />
-                        </SwiperSlide>
-                        <SwiperSlide className="!w-fit">
-                            <RecipeCard />
-                        </SwiperSlide>
-                        {/* <SwiperSlide className="!w-fit">
-                            <a href="details.html" className="card">
-                                <div className="relative w-[200px] h-[280px] rounded-[30px] bg-white overflow-hidden">
-                                    <img
-                                        src="/assets/images/thumbnails/thumbnail-2.png"
-                                        className="absolute w-full h-full object-cover"
-                                        alt="thumbnails"
-                                    />
-                                    <div className="gradient-filter absolute w-full h-full bg-[linear-gradient(180deg,rgba(0,0,0,0)40.47%,#000000_81.6%)] z-10" />
-                                    <div className="relative flex flex-col h-full justify-between p-5 z-20">
-                                        <div className="flex shrink-0 items-center w-fit rounded-full py-1 px-2 bg-white/20 backdrop-blur">
-                                            <img
-                                                src="/assets/images/icons/Star 1.svg"
-                                                className="w-4 h-4"
-                                                alt="star"
-                                            />
-                                            <span className="font-semibold text-xs leading-[18px] text-white">
-                                                4.8
-                                            </span>
-                                        </div>
-                                        <div className="flex flex-col gap-[6px]">
-                                            <h3 className="font-bold text-xl leading-[28px] text-white">
-                                                Burger Tebal Makin Hot
-                                            </h3>
-                                            <p className="font-semibold text-xs leading-[18px] text-[#2d9524]">
-                                                Bakery
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </SwiperSlide>
-                        <SwiperSlide className="!w-fit">
-                            <a href="details.html" className="card">
-                                <div className="relative w-[200px] h-[280px] rounded-[30px] bg-white overflow-hidden">
-                                    <img
-                                        src="/assets/images/thumbnails/thumbnail-3.png"
-                                        className="absolute w-full h-full object-cover"
-                                        alt="thumbnails"
-                                    />
-                                    <div className="gradient-filter absolute w-full h-full bg-[linear-gradient(180deg,rgba(0,0,0,0)40.47%,#000000_81.6%)] z-10" />
-                                    <div className="relative flex flex-col h-full justify-between p-5 z-20">
-                                        <div className="flex shrink-0 items-center w-fit rounded-full py-1 px-2 bg-white/20 backdrop-blur">
-                                            <img
-                                                src="/assets/images/icons/Star 1.svg"
-                                                className="w-4 h-4"
-                                                alt="star"
-                                            />
-                                            <span className="font-semibold text-xs leading-[18px] text-white">
-                                                4.3
-                                            </span>
-                                        </div>
-                                        <div className="flex flex-col gap-[6px]">
-                                            <h3 className="font-bold text-xl leading-[28px] text-white">
-                                                French Toast Blueberries
-                                            </h3>
-                                            <p className="font-semibold text-xs leading-[18px] text-[#2d9524]">
-                                                by Masa
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </SwiperSlide> */}
-                    </Swiper>
-                </div>
-            </section>
+            <CategoryWrapper />
+            <FeaturedRecipesWrapper />
             <div
                 id="BottomNav"
                 className="fixed z-50 bottom-0 w-full max-w-[640px] mx-auto border-t border-[#E7E7E7] py-4 px-5 bg-white/70 backdrop-blur"

@@ -1,12 +1,16 @@
-import { Link } from "react-router-dom"
-import { Recipe } from "../types/Types"
 import { baseUrl } from "../utils/Utils"
 
 
-export default function RecipeCard({ recipe }: RecipeCardProps) {
+interface RecipesProps {
+    id: number
+    name: string
+    thumbnail: string
+}
+
+export default function CategoryRecipeCard({ recipe }: RecipesProps) {
     return (
         <div>
-            <Link to={`/recipe/${recipe.slug}`} className="card">
+            <a href="details.html" className="card">
                 <div className="relative w-[200px] h-[280px] rounded-[30px] bg-white overflow-hidden">
                     <img
                         src={`${baseUrl}/${recipe.thumbnail}`}
@@ -29,17 +33,10 @@ export default function RecipeCard({ recipe }: RecipeCardProps) {
                             <h3 className="font-bold text-xl leading-[28px] text-white">
                                 {recipe.name}
                             </h3>
-                            <p className="font-semibold text-xs leading-[18px] text-[#2d9524]">
-                                {recipe.category.name}
-                            </p>
                         </div>
                     </div>
                 </div>
-            </Link>
+            </a>
         </div>
     )
-}
-
-interface RecipeCardProps {
-    recipe: Recipe
 }
